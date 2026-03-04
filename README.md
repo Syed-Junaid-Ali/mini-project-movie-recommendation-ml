@@ -1,52 +1,40 @@
-# Movie Recommendation System using TF-IDF & Cosine Similarity genres + overview + keywords + cast
+## Movie Recommendation System (Content-Based)
 
-##  Overview
-This project implements a content-based Movie Recommendation System using Natural Language Processing techniques. The system recommends movies based on genre similarity using vectorization and cosine similarity.
+## NLP-Driven Engine using TF-IDF & Cosine Similarity
 
-##  Objective
-To build a recommendation engine that suggests movies similar to a given movie by analyzing genre-based textual features.
+## Overview
+This project implements a Content-Based Filtering recommendation engine. By leveraging Natural Language Processing (NLP), the system analyzes movie metadata including genres, overviews, keywords, and cast to suggest films with high contextual similarity.
 
-##  Methodology
+## Objective
+To engineer a recommendation pipeline that transforms textual movie metadata into high-dimensional vectors, allowing for the retrieval of the Top-N similar movies based on mathematical proximity.
 
-The system follows these steps:
+## Methodology & Technical Stack
 
-1. Data preprocessing and cleaning  
-2. Genre feature extraction  
-3. Text vectorization using:
-   - CountVectorizer
-   - TF-IDF (Term Frequency – Inverse Document Frequency)
-4. Cosine similarity computation  
-5. Recommendation function to retrieve top-N similar movies  
+The system follows a standard machine learning pipeline:
 
-##  Dataset
-The dataset contains movie titles and genre information used to compute similarity between movies.
+1. Data Preprocessing: Cleaning text, handling null values, and merging features (Genres + Keywords + Cast + Overview).
 
-##  Machine Learning Concepts Used
-- Feature Engineering
-- Text Vectorization
-- TF-IDF Transformation
-- Similarity Metrics (Cosine Similarity)
+2. Feature Engineering: Tokenization and removal of stop words.
 
-##  Technologies Used
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Jupyter Notebook
+3. Vectorization: * TF-IDF (Term Frequency – Inverse Document Frequency): To weigh the importance of specific keywords.
 
-##  How It Works
-- Genres are converted into numerical vectors.
-- Cosine similarity calculates similarity scores between movies.
-- The system returns the top similar movies based on similarity ranking.
+4. CountVectorizer: For categorical features like Cast and Genres.
 
-##  Future Improvements
-- Include cast, director, and keywords for richer feature representation
-- Implement collaborative filtering
-- Build a hybrid recommendation system
-- Deploy using Streamlit or Flask
-- Evaluate performance using ranking metrics (Precision@K, Recall@K)
+5. Similarity Metric: Computing the Cosine Similarity matrix to find the angle between movie vectors.
 
-##  Author
-Syed Junaid Ali Shah  
-MS Computer Science (Cybersecurity)  
-Machine Learning for AI-Driven Security
+## Technologies: Python, Pandas, NumPy, Scikit-learn, Jupyter Notebook
+
+## How It Works:
+The core logic relies on the Cosine Similarity formula:
+## similarity = COS (0) = A.B \ ||A||| ||B||
+
+Where A and B are the TF-IDF vectors of two movies. A score closer to 1 indicates high similarity.
+
+## Future Enhancements
+1. Hybrid Model: Combine Content-Based with Collaborative Filtering (User Ratings).
+2. Deployment: Build a web interface using Streamlit or Flask.
+3. Deep Learning: Implement Word2Vec or BERT embeddings for deeper semantic understanding.
+4. Evaluation: Measure performance using Precision@K and Recall@K.
+
+  ## Author
+Syed Junaid Ali Shah MS Computer Science (Cybersecurity) Specializing in Machine Learning & AI-Driven Security
