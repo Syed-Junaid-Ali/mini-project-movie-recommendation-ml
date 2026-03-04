@@ -1,44 +1,52 @@
-# 🎬 Movie Recommendation System (Machine Learning)
+# Movie Recommendation System using TF-IDF & Cosine Similarity
 
 ##  Overview
-This project implements a Machine Learning-based Movie Recommendation System that suggests relevant movies to users using similarity-based techniques.
+This project implements a content-based Movie Recommendation System using Natural Language Processing techniques. The system recommends movies based on genre similarity using vectorization and cosine similarity.
 
 ##  Objective
-To develop a content-based recommendation engine that analyzes movie features and suggests similar movies using cosine similarity.
+To build a recommendation engine that suggests movies similar to a given movie by analyzing genre-based textual features.
 
 ##  Methodology
+
 The system follows these steps:
-- Data preprocessing and cleaning
-- Feature extraction from genres and metadata
-- Text vectorization
-- Cosine similarity computation
-- Recommendation function implementation
+
+1. Data preprocessing and cleaning  
+2. Genre feature extraction  
+3. Text vectorization using:
+   - CountVectorizer
+   - TF-IDF (Term Frequency – Inverse Document Frequency)
+4. Cosine similarity computation  
+5. Recommendation function to retrieve top-N similar movies  
 
 ##  Dataset
-The dataset contains movie titles, genres, and metadata used to compute similarity scores between movies.
+The dataset contains movie titles and genre information used to compute similarity between movies.
 
-## Technologies Used
+##  Machine Learning Concepts Used
+- Feature Engineering
+- Text Vectorization
+- TF-IDF Transformation
+- Similarity Metrics (Cosine Similarity)
+
+##  Technologies Used
 - Python
 - Pandas
 - NumPy
 - Scikit-learn
 - Jupyter Notebook
 
-## How It Works
-1. The dataset is preprocessed.
-2. Important features are combined.
-3. Features are converted into vectors.
-4. Cosine similarity is calculated.
-5. Top similar movies are recommended.
+##  How It Works
+- Genres are converted into numerical vectors.
+- Cosine similarity calculates similarity scores between movies.
+- The system returns the top similar movies based on similarity ranking.
 
 ##  Future Improvements
-- Implementation of collaborative filtering
-- Hybrid recommendation system
-- Model evaluation metrics
-- Web deployment using Flask or Streamlit
-- Integration with real-time user data
+- Include cast, director, and keywords for richer feature representation
+- Implement collaborative filtering
+- Build a hybrid recommendation system
+- Deploy using Streamlit or Flask
+- Evaluate performance using ranking metrics (Precision@K, Recall@K)
 
 ##  Author
 Syed Junaid Ali Shah  
 MS Computer Science (Cybersecurity)  
-Machine Learning | AI Driven Security | Web Security | Cloud Computing | Blockchain
+Machine Learning for AI-Driven Security
