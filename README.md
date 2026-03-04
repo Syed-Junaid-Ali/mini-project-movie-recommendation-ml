@@ -1,4 +1,4 @@
-# Movie Recommendation System using TF-IDF & Cosine Similarity
+# Movie Recommendation System using TF-IDF & Cosine Similarity genres + overview + keywords + cast
 
 ##  Overview
 This project implements a content-based Movie Recommendation System using Natural Language Processing techniques. The system recommends movies based on genre similarity using vectorization and cosine similarity.
